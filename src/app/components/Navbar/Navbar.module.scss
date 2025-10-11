@@ -1,0 +1,56 @@
+@import "./Variables.scss";
+
+.container{
+    width: max-content;
+    height: auto;
+    background-color: $BackgroundColor;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 15px;
+    padding: 0px 20px;
+    border-radius: 15px;
+}
+.h1{
+    color: $LogoColor;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 40px;
+}
+@media screen and (max-width: 500px){
+    .h1{font-size: 35px;}
+}
+.ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+.ul li{
+    color: $FontColor;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width: 900px){
+    .container{
+        width: auto;
+        padding: 0px;
+        margin: 0px 10px;
+    }
+    .ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0;
+    }
+}
+@media screen and (max-width: 515px){
+    .ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0;
+        padding: 0px 10px;
+        padding-bottom: 10px;
+    }
+}
