@@ -23,7 +23,7 @@ export default function Todolist() {
                 <h1 className={styles.h1}>
                     To-Do-List
                     <img
-                        src="/icons/icons8-to-do-list.png"
+                        src={process.env.NODE_ENV === "production" ? "/MiniTools/icons/icons8-to-do-list.png" : "/icons/icons8-to-do-list.png"}
                         alt="Todo Icon"
                         className={styles.icon}
                     />
