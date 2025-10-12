@@ -26,25 +26,26 @@ export default function Weather() {
         }
 
         const getWeatherImage = (main: string, night: boolean) => {
+            const prefix = process.env.NODE_ENV === "production" ? "/MiniTools" : "";
             switch (main) {
                 case "Clear":
-                    return night ? "/images/moon2.png" : "/images/clear.png";
+                    return night ? `${prefix}/images/moon2.png` : `${prefix}/images/clear.png`;
                 case "Clouds":
-                    return night ? "/images/night-cloud.png" : "/images/clouds.png";
+                    return night ? `${prefix}/images/night-cloud.png` : `${prefix}/images/clouds.png`;
                 case "Drizzle":
-                    return night ? "/images/drizzle.png" : "/images/drizzle.png";
+                    return `${prefix}/images/drizzle.png`;
                 case "Mist":
-                    return night ? "/images/mist3.png" : "/images/mist.png";
+                    return night ? `${prefix}/images/mist3.png` : `${prefix}/images/mist.png`;
                 case "Rain":
-                    return night ? "/images/drizzle.png" : "/images/drizzle.png";
+                    return `${prefix}/images/drizzle.png`;
                 case "Snow":
-                    return night ? "/images/snow.png" : "/images/snow.png";
+                    return `${prefix}/images/snow.png`;
                 case "Thunderstorm":
-                    return night ? "/images/humidity.png" : "/images/humidity.png";
+                    return `${prefix}/images/humidity.png`;
                 default:
-                    return night ? "/images/moon2.png" : "/images/clear.png";
+                    return night ? `${prefix}/images/moon2.png` : `${prefix}/images/clear.png`;
             }
-        }
+        };
 
         try {
             const res = await fetch(url);

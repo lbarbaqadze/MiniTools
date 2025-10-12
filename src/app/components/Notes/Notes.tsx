@@ -27,7 +27,7 @@ export default function Notes() {
     return (
         <div className={styles.container}>
             <div className={styles.cont1}>
-                <img src="/icons/icons8-notes-64.png" alt="Notes Icon" />
+                <img src={process.env.NODE_ENV === "production" ? "/MiniTools/icons/icons8-notes-64.png" : "/icons/icons8-notes-64.png"} alt="Notes Icon" />
                 <h1 className={styles.h1}>Notes</h1>
             </div>
 
