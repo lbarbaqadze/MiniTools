@@ -18,7 +18,7 @@ export default function Weather() {
 
     const fetchWeather = async (searchCity?: string) => {
         const targetCity = searchCity || city;
-        const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+        const API_KEY = "018d82407d1ca482965b433406031585"
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${targetCity}&units=metric&appid=${API_KEY}`;
 
         const isNight = (dt: number, sunrise: number, sunset: number) => {
